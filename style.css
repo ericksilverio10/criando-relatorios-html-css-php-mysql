@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 * {
     margin: 0;
     border: 0;
@@ -17,7 +17,9 @@ body{
     align-items: center;
     justify-content: center;
 }
-
+.titulo{
+    font-family: "Montserrat";
+}
 main.container{
     background: white;
     max-width: 350px;
@@ -34,7 +36,20 @@ main h1,h2{
     position: relative;
 
 }
-
+.titulo{
+    transform: scaleX(1);
+    transition: .3s all ease-in-out;
+}
+.titulo::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 1px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
 main h1,h2::before{
     content: '';
     position: absolute;
@@ -107,4 +122,3 @@ form input[type="submit"]:hover{
     letter-spacing: 0.5px;
     background: linear-gradient(to right, #4776e6, #8e54e9);
 }
-
